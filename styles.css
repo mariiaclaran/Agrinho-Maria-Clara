@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #13b629;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    width: 100%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.crop-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.crop-option input[type="radio"] {
+    margin-right: 10px;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+input[type="date"] {
+    padding: 8px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.timer {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.timer h2 {
+    margin-top: 0;
+    font-size: 20px;
+    color: #333;
+}
+
+.timer p {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+}

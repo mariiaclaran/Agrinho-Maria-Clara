@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronômetro de Cultivo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Cronômetro de Cultivo</h1>
+    </header>
+    <main>
+        <section id="cropSelection">
+            <h2>Selecione a Cultura:</h2>
+            <div class="crop-option">
+                <input type="radio" id="cropCorn" name="crop" value="milho" required>
+                <label for="cropCorn">Milho</label>
+            </div>
+            <div class="crop-option">
+                <input type="radio" id="cropSoy" name="crop" value="soja">
+                <label for="cropSoy">Soja</label>
+            </div>
+            <div class="crop-option">
+                <input type="radio" id="cropWheat" name="crop" value="trigo">
+                <label for="cropWheat">Trigo</label>
+            </div>
+
+            <form id="plantingForm">
+                <label for="plantDate">Data de Plantio:</label>
+                <input type="date" id="plantDate" name="plantDate" required>
+                <button type="submit">Iniciar Cronômetro</button>
+            </form>
+        </section>
+
+        <section id="timersSection" aria-live="polite">
+            <div class="timer" id="poisonTimer">
+                <h2>Tempo para Aplicação de Veneno</h2>
+                <p id="poisonCountdown">--:--:--</p>
+            </div>
+
+            <div class="timer" id="fertilizerTimer">
+                <h2>Tempo para Aplicação de Fertilizante</h2>
+                <p id="fertilizerCountdown">--:--:--</p>
+            </div>
+
+            <div class="timer" id="harvestTimer">
+                <h2>Tempo Restante para a Colheita</h2>
+                <p id="harvestCountdown">--:--:--</p>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
