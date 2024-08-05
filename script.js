@@ -85,3 +85,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 1000);
     }
 });
+
+// Função para mostrar as informações da cultura selecionada
+document.querySelectorAll('input[type=radio][name=crop]').forEach(function(radio) {
+    radio.addEventListener('change', function() {
+        document.querySelectorAll('.crop').forEach(function(crop) {
+            crop.style.display = 'none';
+        });
+        document.getElementById(this.value + '-info').style.display = 'block';
+    });
+});
