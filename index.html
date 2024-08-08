@@ -1,16 +1,28 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cronômetro de Cultivo</title>
+    <title>Cultivo de Grãos</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header>
-        <h1>Cronômetro de Cultivo</h1>
+        <h1>Cronômetro de Cultivo de Grãos</h1>
     </header>
     <main>
+        <section id="introduction">
+            <h2>Por que fazer o cultivo de grãos?</h2>
+            <p>O cultivo de grãos, como milho, soja e trigo, é essencial para a produção de alimentos em todo o mundo.
+                Cada cultura tem características específicas e requer práticas agrícolas adequadas para garantir uma
+                colheita bem sucedida. O acompanhamento do tempo de plantio, aplicação de fertilizantes, venenos e o
+                período de colheita é crucial para maximizar a produtividade e a qualidade dos grãos produzidos. Este
+                sistema oferece uma maneira prática de monitorar essas etapas críticas, garantindo que cada tarefa seja
+                realizada no momento certo.</p>
+        </section>
+
         <section id="cropSelection">
             <h2>Selecione a Cultura:</h2>
             <div class="crop-option">
@@ -33,29 +45,34 @@
             </form>
         </section>
 
-        <!-- Seção de Informações das Culturas -->
         <section id="cropInfo">
             <h2>Informações sobre as Culturas</h2>
             <div class="crop-info">
-                <!-- Informações do Milho -->
                 <div class="crop" id="milho-info" style="display: none;">
                     <h3>Milho</h3>
-                    <img src="imagem-espiga-campo-milho-safrinha.jpg" alt="Milho">
-                    <p>O milho (Zea mays) é um cereal cultivado em grande parte do mundo e amplamente utilizado como alimento humano e ração animal devido às suas qualidades nutricionais. O milho é uma planta da família Poácea, originária da América Central, e tem grande capacidade de adaptação a diversos climas, sendo cultivado em praticamente todas as regiões do mundo. Quanto ao uso, o milho é versátil: seus grãos podem ser consumidos frescos, secos, transformados em farinha, óleo, xarope de milho e até mesmo em biocombustíveis.</p>
+                    <img src="producao-de-milho-e1684255576640-740x493.jpeg" alt="Milho">
+                    <p>O milho (Zea mays) é um cereal cultivado em grande parte do mundo e amplamente utilizado como
+                        alimento humano e ração animal devido às suas qualidades nutricionais. O milho é uma planta da
+                        família Poácea, originária da América Central, e tem grande capacidade de adaptação a diversos
+                        climas, sendo cultivado em praticamente todas as regiões do mundo. Quanto ao uso, o milho é
+                        versátil: seus grãos podem ser consumidos frescos, secos, transformados em farinha, óleo, xarope
+                        de milho e até mesmo em biocombustíveis.</p>
                 </div>
-
-                <!-- Informações da Soja -->
                 <div class="crop" id="soja-info" style="display: none;">
                     <h3>Soja</h3>
-                    <img src="Maos-graos-de-soja-plantacao-de-soja.jpg" alt="Soja">
-                    <p>A soja (Glycine max) é uma planta originária da China, pertencente à família Fabaceae, é conhecida por seu alto teor de proteínas e óleos. É utilizada na alimentação humana, animal e na indústria de óleos vegetais. As sementes de soja são fundamentais na produção de tofu, leite de soja e diversos produtos alimentícios.</p>
+                    <img src="soja03-640x426.webp" alt="Soja">
+                    <p>A soja (Glycine max) é uma planta originária da China, pertencente à família Fabaceae, é
+                        conhecida por seu alto teor de proteínas e óleos. É utilizada na alimentação humana, animal e na
+                        indústria de óleos vegetais. As sementes de soja são fundamentais na produção de tofu, leite de
+                        soja e diversos produtos alimentícios.</p>
                 </div>
-
-                <!-- Informações do Trigo -->
                 <div class="crop" id="trigo-info" style="display: none;">
                     <h3>Trigo</h3>
-                    <img src="area-de-plantio-de-trigo-aumenta-mais-de-no-brasil-20210908152524jpg.jpg" alt="Trigo">
-                    <p>O trigo (Triticum aestivum) é um dos cereais mais importantes do mundo, utilizado principalmente na produção de farinha para pães, bolos, massas e outros alimentos. Originário do Oriente Médio, é cultivado em diversas regiões com climas temperados. As espigas do trigo contêm grãos ricos em amido e proteínas.</p>
+                    <img src="Trigo-03-Crédito-Shutterstock_70649659-06-2015.jpg" alt="Trigo">
+                    <p>O trigo (Triticum aestivum) é um dos cereais mais importantes do mundo, utilizado principalmente
+                        na produção de farinha para pães, bolos, massas e outros alimentos. Originário do Oriente Médio,
+                        é cultivado em diversas regiões com climas temperados. As espigas do trigo contêm grãos ricos em
+                        amido e proteínas.</p>
                 </div>
             </div>
         </section>
@@ -63,20 +80,34 @@
         <section id="timersSection" aria-live="polite">
             <div class="timer" id="poisonTimer">
                 <h2>Tempo para Aplicação de Veneno</h2>
-                <p id="poisonCountdown">--:--:--</p>
+                <p id="poisonCountdown"></p>
             </div>
 
             <div class="timer" id="fertilizerTimer">
                 <h2>Tempo para Aplicação de Fertilizante</h2>
-                <p id="fertilizerCountdown">--:--:--</p>
+                <p id="fertilizerCountdown"></p>
             </div>
 
             <div class="timer" id="harvestTimer">
                 <h2>Tempo Restante para a Colheita</h2>
-                <p id="harvestCountdown">--:--:--</p>
+                <p id="harvestCountdown"></p>
             </div>
         </section>
     </main>
+    <footer class="rodape">
+        <img src="download.png" alt="programação" class="rodape__logo" />
+        <ul class="rodape__lista">
+            <li class="lista__link">
+                <a href="https://www.sistemafaep.org.br/agrinho/">AGRINHO 2024</a>
+            </li>
+        </ul>
+        <p>Para saber mais sobre a importância do cultivo de grãos, visite 
+            <a href="https://dag.ufla.br/petagronomia/portal/noticiaspet/54-graos-valores-e-importancia-no-pais#:~:text=Nesse%20sentido%2C%20o%20mercado%20de,produtos%20base%20para%20outras%20ind%C3%BAstrias." target="_blank">este artigo informativo</a>.
+        </p>
+        <p class="rodape__texto">® 2024 - COLÉGIO ABRAHAM LINCOLN - KALORÉ - NRE APUCARANA</p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
+
 </html>
