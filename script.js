@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const cropSelection = document.querySelectorAll('input[name="crop"]');
     const plantingForm = document.getElementById('plantingForm');
     const poisonCountdown = document.getElementById('poisonCountdown');
@@ -7,15 +7,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let selectedCrop;
 
-    // Event listener para selecionar a cultura
-    cropSelection.forEach(function(radio) {
-        radio.addEventListener('change', function() {
+    cropSelection.forEach(function (radio) {
+        radio.addEventListener('change', function () {
             selectedCrop = this.value;
         });
     });
 
-    // Event listener para submeter o formulário
-    plantingForm.addEventListener('submit', function(event) {
+    plantingForm.addEventListener('submit', function (event) {
         event.preventDefault();
         const plantDate = new Date(document.getElementById('plantDate').value);
         if (!selectedCrop) {
@@ -26,7 +24,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     function startTimers(plantDate) {
-        // Definir os tempos estimados para cada cultura
         let poisonDays, fertilizerDays, harvestDays;
 
         switch (selectedCrop) {
@@ -49,7 +46,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 break;
         }
 
-        // Calcular as datas alvo
         const poisonDate = new Date(plantDate);
         poisonDate.setDate(poisonDate.getDate() + poisonDays);
 
@@ -59,14 +55,13 @@ document.addEventListener('DOMContentLoaded', function() {
         const harvestDate = new Date(plantDate);
         harvestDate.setDate(harvestDate.getDate() + harvestDays);
 
-        // Iniciar os cronômetros
         startCountdown(poisonDate, poisonCountdown);
         startCountdown(fertilizerDate, fertilizerCountdown);
         startCountdown(harvestDate, harvestCountdown);
     }
 
     function startCountdown(targetDate, displayElement) {
-        const timerInterval = setInterval(function() {
+        const timerInterval = setInterval(function () {
             const now = new Date().getTime();
             const timeDiff = targetDate - now;
 
@@ -86,10 +81,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Função para mostrar as informações da cultura selecionada
-document.querySelectorAll('input[type=radio][name=crop]').forEach(function(radio) {
-    radio.addEventListener('change', function() {
-        document.querySelectorAll('.crop').forEach(function(crop) {
+document.querySelectorAll('input[type=radio][name=crop]').forEach(function (radio) {
+    radio.addEventListener('change', function () {
+        document.querySelectorAll('.crop').forEach(function (crop) {
             crop.style.display = 'none';
         });
         document.getElementById(this.value + '-info').style.display = 'block';
